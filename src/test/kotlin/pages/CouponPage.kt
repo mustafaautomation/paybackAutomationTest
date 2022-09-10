@@ -66,15 +66,24 @@ class CouponPage(driver: AppiumDriver) : BaseSetup(driver) {
 
     fun validateCouponIsActivated(){
 
-        selectedFilterOnCouponPage?.click()
+
         filteredCouponDescription?.isDisplayed
         redeemOfflineBtn?.isEnabled
 
-
-
     }
 
+    fun navigateToActivatedCouponsPage(){
+        selectedFilterOnCouponPage?.click()
+        activatedCouponsPage?.click()
+    }
 
+    fun validateCouponIsShownOnActivatedPage(){
+
+
+        filteredCouponDescription?.isDisplayed
+        redeemOfflineBtn?.isEnabled
+
+    }
 
 
 

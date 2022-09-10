@@ -40,6 +40,23 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
             ?.`I click on the Coupon icon on navbar`()
         then()
             ?.`I am navigated to the Coupons Page`()
+        `when`()
+            ?.`I click on the Filter Button`()
+        then()
+            ?.`I am navigated to Filters Screen`()
+        `when`()
+            ?.`I select REWE my preffered Coupon partner`()
+        then()
+            ?.`Rewe coupon is being displayed`()
+        `when`()
+            ?.`I tap on the Activate Coupon Button`()
+        then()
+            ?.`I can see that Coupon Is Activated`()
+        `when`()
+            ?.`I tap on the Activated Coupon Screen`()
+        then()
+            ?.`I can see that my Activated Coupon is showed here`()
+
 
 
     }

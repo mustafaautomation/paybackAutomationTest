@@ -32,15 +32,42 @@ open class When : Stage<When?>() {
 
     @Throws(InterruptedException::class)
     fun `I click on the Coupon icon on navbar`() {
-
+        couponPage = CouponPage(application.driver as AppiumDriver)
         couponPage.clickOnCouponPage()
 
     }
 
     @Throws(InterruptedException::class)
     fun `I click on the Filter Button`() {
-
-        couponPage.clickOnCouponPage()
+        couponPage = CouponPage(application.driver as AppiumDriver)
+        couponPage.clickOnFiltersBtn()
 
     }
+
+    @Throws(InterruptedException::class)
+    fun `I select REWE my preffered Coupon partner`() {
+        couponFilterPagePage = CouponFilterPagePage(application.driver as AppiumDriver)
+        couponFilterPagePage.clickOnCouponPartnerRewe()
+
+    }
+
+    @Throws(InterruptedException::class)
+    fun `I tap on the Activate Coupon Button`() {
+
+        couponPage = CouponPage(application.driver as AppiumDriver)
+        couponPage.activateCoupon()
+
+    }
+
+    @Throws(InterruptedException::class)
+    fun `I tap on the Activated Coupon Screen`() {
+
+        couponPage = CouponPage(application.driver as AppiumDriver)
+        couponPage.navigateToActivatedCouponsPage()
+
+    }
+
+
+
+
 }

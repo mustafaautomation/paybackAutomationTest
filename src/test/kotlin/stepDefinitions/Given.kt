@@ -1,11 +1,9 @@
 package stepDefinitions
 
 import com.tngtech.jgiven.Stage
-import com.tngtech.jgiven.annotation.BeforeStage
-import com.tngtech.jgiven.annotation.NestedSteps
-import com.tngtech.jgiven.annotation.ProvidedScenarioState
-import com.tngtech.jgiven.annotation.ScenarioState
+import com.tngtech.jgiven.annotation.*
 import io.appium.java_client.AppiumDriver
+import org.junit.jupiter.api.BeforeAll
 import pages.CouponFilterPagePage
 import pages.CouponPage
 import pages.HomePage
@@ -23,19 +21,20 @@ open class Given : Stage<Given?>() {
 
 
 
-    @BeforeStage
+
     fun init(){
         initiateApplication = InitiateApplication(application.driver as AppiumDriver)
         homePage = HomePage(application.driver as AppiumDriver)
         couponPage = CouponPage(application.driver as AppiumDriver)
         couponFilterPagePage = CouponFilterPagePage(application.driver as AppiumDriver)
+        application.setupDriver()
 
     }
 
     @Throws(InterruptedException::class)
     fun `I click on the Application icon on Drawer`() {
 
-        application.setupDriver()
+        initiateApplication = InitiateApplication(application.driver as AppiumDriver)
         initiateApplication.openApplicationFromList();
 
     }

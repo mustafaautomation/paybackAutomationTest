@@ -3,7 +3,7 @@
   "name": "Test Runner",
   "scenarios": [
     {
-      "description": "",
+      "description": "User Opens the application and redeems the Rewe coupon ",
       "tagIds": [],
       "explicitParameters": [],
       "derivedParameters": [],
@@ -14,11 +14,11 @@
           "explicitArguments": [],
           "derivedArguments": [],
           "status": "SUCCESS",
-          "durationInNanos": 12815296083
+          "durationInNanos": 21901003708
         }
       ],
       "casesAsTable": false,
-      "durationInNanos": 12815296083
+      "durationInNanos": 21901003708
     }
   ],
   "tagMap": {}

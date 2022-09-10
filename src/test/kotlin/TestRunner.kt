@@ -31,11 +31,13 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
     }
     @Test
     fun jgivenScenario(){
-        getScenario().startScenario("");
+        getScenario().startScenario("User Opens the application and redeems the Rewe coupon");
         given()
             ?.`I click on the Application icon on Drawer`();
-        given()
-            ?.`I successfully navigated inside the application`()
+        `when`()
+            ?.`I successfully navigated inside the application`();
+        then()
+            ?.`I click on the Coupon icon on navbar`();
     }
 
 

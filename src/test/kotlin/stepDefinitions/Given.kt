@@ -30,13 +30,7 @@ open class Given : Stage<Given?>() {
 
     }
 
-    @BeforeStage
-    @Throws(InterruptedException::class)
-    fun `I successfully navigated inside the application`() {
 
 
-        homePage.validateUserOnHomePage()
-
-    }
 
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-10T12:12:20" hostname="Mustafas-MacBook-Air.local" time="24.127">
+<testsuite name="TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-10T17:59:18" hostname="Mustafas-MacBook-Air.local" time="32.481">
   <properties/>
-  <testcase name="jgivenScenario" classname="TestRunner" time="24.127"/>
+  <testcase name="jgivenScenario" classname="TestRunner" time="32.481"/>
   <system-out><![CDATA[
 Test Class: TestRunner
 
- 
+ User Opens the application and redeems the Rewe coupon 
 
 
 ]]></system-out>

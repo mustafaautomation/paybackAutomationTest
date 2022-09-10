@@ -11,16 +11,24 @@ import utilities.ProjectSetup
 open class When : Stage<When?>() {
     @ProvidedScenarioState
     var driver: AppiumDriver? = null
-    @ScenarioState
+    private val application = ProjectSetup()
+    lateinit var initiateApplication: InitiateApplication
     lateinit var homePage: HomePage
 
 
 
 
+    @Throws(InterruptedException::class)
+    fun `I successfully navigated inside the application`() {
+        homePage = HomePage(application.driver as AppiumDriver)
+
+        homePage.validateUserOnHomePage()
+
+    }
 
 
     @Throws(InterruptedException::class)
-    fun `I click on the coupo to consume`(): When? {
+    fun `I click on the coupon to consume`(): When? {
 
 
         return self()

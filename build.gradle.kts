@@ -1,5 +1,8 @@
 plugins {
     kotlin("jvm") version "1.6.10"
+    java
+    id("com.tngtech.jgiven.gradle-plugin") version("1.2.2")
+
 }
 
 group ="org.example"
@@ -7,7 +10,9 @@ version ="1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://oss.sonatype.org/content/repositories/snapshots")
 }
+
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
@@ -19,4 +24,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     testImplementation("org.junit.vintage:junit-vintage-engine:5.9.0")
+    testImplementation("com.tngtech.jgiven:jgiven-html5-report:1.2.2")
+
 }
+

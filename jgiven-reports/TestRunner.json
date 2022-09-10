@@ -1,0 +1,25 @@
+{
+  "className": "TestRunner",
+  "name": "Test Runner",
+  "scenarios": [
+    {
+      "description": "",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "durationInNanos": 84992153416
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 84992153416
+    }
+  ],
+  "tagMap": {}
+}

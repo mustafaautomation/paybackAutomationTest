@@ -36,7 +36,6 @@ class ProjectSetup {
 
         val PLATFORM_NAME: String = PropertyUtils.getProperty("android.platform")
         val PLATFORM_VERSION: String = PropertyUtils.getProperty("android.platform.version")
-        val APP_NAME: String = PropertyUtils.getProperty("android.app.name")
         val DEVICE_NAME: String = PropertyUtils.getProperty("android.device.name")
         val APP_FULL_RESET: String = PropertyUtils.getProperty("android.app.full.reset")
         val APP_NO_RESET: String = PropertyUtils.getProperty("android.app.no.reset")

@@ -50,6 +50,6 @@ class ProjectSetup {
     }
 
     fun closeDriver() {
-        driver.quit()
+        driver.close()
     }
 }

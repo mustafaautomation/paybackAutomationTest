@@ -1,6 +1,7 @@
 import com.tngtech.jgiven.annotation.ScenarioState
 import com.tngtech.jgiven.junit.ScenarioTest
 import io.appium.java_client.AppiumDriver
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.openqa.selenium.WebDriver
@@ -19,6 +20,10 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
         initiateApplication = InitiateApplication(application.driver as AppiumDriver)
     }
 
+    fun shutDown(){
+        application.closeDriver()
+    }
+
     @ScenarioState
     var driver: AppiumDriver? = null
 
@@ -28,6 +33,7 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
         setup()
 
     }
+
     @Test
     fun jgivenScenario(){
         getScenario().startScenario("User Opens the application and redeems the Rewe coupon");
@@ -57,5 +63,11 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
             ?.`I can see that my Activated Coupon is showed here`()
 
     }
+
+    @After
+    fun closeApplication(){
+        shutDown()
+    }
+
 
 }

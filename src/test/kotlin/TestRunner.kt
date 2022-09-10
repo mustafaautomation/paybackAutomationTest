@@ -27,7 +27,6 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
 
         setup()
 
-
     }
     @Test
     fun jgivenScenario(){
@@ -57,10 +56,6 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
         then()
             ?.`I can see that my Activated Coupon is showed here`()
 
-
-
     }
 
-
-
-    }
+}

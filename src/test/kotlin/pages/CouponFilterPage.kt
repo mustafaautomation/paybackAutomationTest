@@ -17,9 +17,6 @@ class CouponFilterPage(driver: AppiumDriver) : BaseSetup(driver){
     @AndroidFindBy(id = "de.payback.client.android:id/coupon_action_reset")
     var resetBtn: WebElement? = null
 
-
-
-
     fun clickOnCouponPartnerRewe()
     {
         couponPartnerRewe?.click()

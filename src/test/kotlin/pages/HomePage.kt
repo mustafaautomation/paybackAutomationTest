@@ -7,7 +7,6 @@ import utilities.BaseSetup
 
 class HomePage(driver: AppiumDriver) : BaseSetup(driver) {
 
-
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Aktuell']")
     var homeNav: WebElement? = null
 
@@ -15,8 +14,5 @@ class HomePage(driver: AppiumDriver) : BaseSetup(driver) {
     {
         homeNav?.isEnabled
     }
-
-
-
 
 }

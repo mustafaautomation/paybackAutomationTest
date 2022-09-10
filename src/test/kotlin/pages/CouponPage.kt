@@ -33,7 +33,6 @@ class CouponPage(driver: AppiumDriver) : BaseSetup(driver) {
     var notActivatedCouponsPage: WebElement? = null
 
 
-
     fun validateUserOnCouponPage()
     {
         couponIconNav?.isEnabled

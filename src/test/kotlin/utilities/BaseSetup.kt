@@ -12,7 +12,6 @@ open class BaseSetup  (private val driver: AppiumDriver) {
         initializeElements()
     }
 
-
     private fun initializeElements() {
         PageFactory.initElements(AppiumFieldDecorator(driver, Duration.ofSeconds(IMPLICIT_WAIT.toLong())), this);
     }
@@ -20,6 +19,5 @@ open class BaseSetup  (private val driver: AppiumDriver) {
     companion object {
         val IMPLICIT_WAIT = 30
     }
-
 
 }

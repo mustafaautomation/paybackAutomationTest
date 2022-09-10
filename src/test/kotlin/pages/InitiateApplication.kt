@@ -15,7 +15,4 @@ class InitiateApplication(driver: AppiumDriver) : BaseSetup(driver) {
         applicationIcon?.click()
     }
 
-
-
-
 }

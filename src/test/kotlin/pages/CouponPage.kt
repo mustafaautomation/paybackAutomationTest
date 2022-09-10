@@ -34,9 +34,6 @@ class CouponPage(driver: AppiumDriver) : BaseSetup(driver) {
 
 
 
-
-
-
     fun validateUserOnCouponPage()
     {
         couponIconNav?.isEnabled

@@ -3,10 +3,6 @@ package stepDefinitions
 import com.tngtech.jgiven.Stage
 import com.tngtech.jgiven.annotation.*
 import io.appium.java_client.AppiumDriver
-import org.junit.jupiter.api.BeforeAll
-import pages.CouponFilterPagePage
-import pages.CouponPage
-import pages.HomePage
 import pages.InitiateApplication
 import utilities.ProjectSetup
 

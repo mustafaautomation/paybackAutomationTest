@@ -1,14 +1,10 @@
 package stepDefinitions
 
 import com.tngtech.jgiven.Stage;
-import com.tngtech.jgiven.annotation.BeforeStage
 import com.tngtech.jgiven.annotation.ProvidedScenarioState;
-import com.tngtech.jgiven.annotation.ScenarioState;
 import io.appium.java_client.AppiumDriver
-import pages.CouponFilterPagePage
+import pages.CouponFilterPage
 import pages.CouponPage
-import pages.HomePage
-import pages.InitiateApplication
 import utilities.ProjectSetup
 
 open class When : Stage<When?>() {
@@ -16,12 +12,12 @@ open class When : Stage<When?>() {
     var driver: AppiumDriver? = null
     val application = ProjectSetup()
     lateinit var couponPage: CouponPage
-    lateinit var couponFilterPagePage: CouponFilterPagePage
+    lateinit var couponFilterPage: CouponFilterPage
 
     @Throws(InterruptedException::class)
     fun `I click on the Coupon icon on navbar`() {
         couponPage = CouponPage(application.driver as AppiumDriver)
-        couponFilterPagePage = CouponFilterPagePage(application.driver as AppiumDriver)
+        couponFilterPage = CouponFilterPage(application.driver as AppiumDriver)
         couponPage.clickOnCouponPage()
 
     }
@@ -36,7 +32,7 @@ open class When : Stage<When?>() {
     @Throws(InterruptedException::class)
     fun `I select REWE my preffered Coupon partner`() {
 
-        couponFilterPagePage.clickOnCouponPartnerRewe()
+        couponFilterPage.clickOnCouponPartnerRewe()
 
     }
 

@@ -1,14 +1,11 @@
 package stepDefinitions
 
 import com.tngtech.jgiven.Stage
-import com.tngtech.jgiven.annotation.BeforeStage
 import com.tngtech.jgiven.annotation.ProvidedScenarioState
-import com.tngtech.jgiven.annotation.ScenarioState
 import io.appium.java_client.AppiumDriver
-import pages.CouponFilterPagePage
+import pages.CouponFilterPage
 import pages.CouponPage
 import pages.HomePage
-import pages.InitiateApplication
 import utilities.ProjectSetup
 
 open class Then : Stage<Then?>() {
@@ -17,13 +14,13 @@ open class Then : Stage<Then?>() {
     private val application = ProjectSetup()
     lateinit var homePage: HomePage
     private lateinit var couponPage: CouponPage
-    lateinit var couponFilterPagePage: CouponFilterPagePage
+    lateinit var couponFilterPage: CouponFilterPage
 
     @Throws(InterruptedException::class)
     fun `I successfully navigated inside the application`() {
         homePage = HomePage(application.driver as AppiumDriver)
         couponPage = CouponPage(application.driver as AppiumDriver)
-        couponFilterPagePage = CouponFilterPagePage(application.driver as AppiumDriver)
+        couponFilterPage = CouponFilterPage(application.driver as AppiumDriver)
         homePage.validateUserOnHomePage()
 
     }
@@ -36,7 +33,7 @@ open class Then : Stage<Then?>() {
     @Throws(InterruptedException::class)
     fun `I am navigated to Filters Screen`() {
 
-        couponFilterPagePage.validateFilterPage()
+        couponFilterPage.validateFilterPage()
     }
 
     @Throws(InterruptedException::class)

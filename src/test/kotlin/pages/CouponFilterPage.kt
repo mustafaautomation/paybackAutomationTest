@@ -5,7 +5,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy
 import org.openqa.selenium.WebElement
 import utilities.BaseSetup
 
-class CouponFilterPagePage(driver: AppiumDriver) : BaseSetup(driver) {
+class CouponFilterPage(driver: AppiumDriver) : BaseSetup(driver){
 
 
     @AndroidFindBy(xpath = "//android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.cardview.widget.CardView/android.view.ViewGroup/android.widget.ImageView")
@@ -30,14 +30,6 @@ class CouponFilterPagePage(driver: AppiumDriver) : BaseSetup(driver) {
         doneBtn?.isDisplayed
         resetBtn?.isDisplayed
     }
-
-
-
-
-
-
-
-
 
 
 }

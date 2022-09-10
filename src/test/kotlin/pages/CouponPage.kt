@@ -14,14 +14,27 @@ class CouponPage(driver: AppiumDriver) : BaseSetup(driver) {
     @AndroidFindBy(id = "de.payback.client.android:id/filter_button")
     var filtersBtn: WebElement? = null
 
-    @AndroidFindBy(xpath = "")
-    var : WebElement? = null
+    @AndroidFindBy(id = "de.payback.client.android:id/not_activated_button")
+    var couponNotActivatedBtn: WebElement? = null
 
-    @AndroidFindBy(xpath = "")
-    var : WebElement? = null
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='REWE']")
+    var selectedFilterOnCouponPage: WebElement? = null
 
-    @AndroidFindBy(xpath = "")
-    var : WebElement? = null
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='auf den Einkauf im REWE Markt oder beim Lieferservice!*']")
+    var filteredCouponDescription: WebElement? = null
+
+    @AndroidFindBy(id = "de.payback.client.android:id/redeem_offline_button")
+    var redeemOfflineBtn: WebElement? = null
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'Aktiviert')]")
+    var activatedCouponsPage: WebElement? = null
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'Nicht aktiviert')]")
+    var notActivatedCouponsPage: WebElement? = null
+
+
+
+
 
 
     fun validateUserOnCouponPage()
@@ -37,6 +50,28 @@ class CouponPage(driver: AppiumDriver) : BaseSetup(driver) {
     fun clickOnFiltersBtn(){
 
         filtersBtn?.click()
+    }
+
+    fun validatePartnerisSelected(){
+
+        selectedFilterOnCouponPage?.isDisplayed
+        filteredCouponDescription?.isDisplayed
+    }
+
+    fun activateCoupon(){
+        couponNotActivatedBtn?.isEnabled
+        couponNotActivatedBtn?.click()
+        redeemOfflineBtn?.isEnabled
+    }
+
+    fun validateCouponIsActivated(){
+
+        selectedFilterOnCouponPage?.click()
+        filteredCouponDescription?.isDisplayed
+        redeemOfflineBtn?.isEnabled
+
+
+
     }
 
 

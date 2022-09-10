@@ -8,20 +8,33 @@ import utilities.BaseSetup
 class CouponFilterPagePage(driver: AppiumDriver) : BaseSetup(driver) {
 
 
-    @AndroidFindBy(xpath = "")
-    var : WebElement? = null
+    @AndroidFindBy(xpath = "//android.widget.FrameLayout[3]/android.view.ViewGroup/androidx.cardview.widget.CardView/android.view.ViewGroup/android.widget.ImageView")
+    var couponPartnerRewe: WebElement? = null
 
-    @AndroidFindBy(xpath = "")
-    var : WebElement? = null
+    @AndroidFindBy(id = "de.payback.client.android:id/done")
+    var doneBtn: WebElement? = null
 
-    @AndroidFindBy(xpath = "")
-    var : WebElement? = null
-
-    @AndroidFindBy(xpath = "")
-    var : WebElement? = null
+    @AndroidFindBy(id = "de.payback.client.android:id/coupon_action_reset")
+    var resetBtn: WebElement? = null
 
 
- 
+
+
+    fun clickOnCouponPartnerRewe()
+    {
+        couponPartnerRewe?.click()
+    }
+
+    fun validateFilterPage()
+    {
+        doneBtn?.isDisplayed
+        resetBtn?.isDisplayed
+    }
+
+
+
+
+
 
 
 

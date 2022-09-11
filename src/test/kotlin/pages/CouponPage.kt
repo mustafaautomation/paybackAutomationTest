@@ -4,10 +4,10 @@ import io.appium.java_client.AppiumDriver
 import io.appium.java_client.pagefactory.AndroidFindBy
 import org.openqa.selenium.WebElement
 import utilities.BaseSetup
-
+//this class contains elements and actions of Coupon Page
 class CouponPage(driver: AppiumDriver) : BaseSetup(driver) {
 
-
+    //Elements of Coupon Page
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Coupons']")
     var couponIconNav: WebElement? = null
 
@@ -32,7 +32,7 @@ class CouponPage(driver: AppiumDriver) : BaseSetup(driver) {
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'Nicht aktiviert')]")
     var notActivatedCouponsPage: WebElement? = null
 
-
+    //Actions of Coupon Page
     fun validateUserOnCouponPage()
     {
         couponIconNav?.isEnabled

@@ -8,6 +8,7 @@ import pages.CouponPage
 import pages.HomePage
 import utilities.ProjectSetup
 
+//This class contains Then Method functionalities
 open class Then : Stage<Then?>() {
     @ProvidedScenarioState
     var driver: AppiumDriver? = null

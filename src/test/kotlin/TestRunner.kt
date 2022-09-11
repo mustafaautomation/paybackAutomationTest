@@ -12,14 +12,17 @@ import stepDefinitions.When
 import utilities.ProjectSetup
 
 
+//This is test runner class
 open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
     private val application = ProjectSetup()
     private lateinit var initiateApplication: InitiateApplication
+    //Function to init Everything
     fun setup(){
         application.setupDriver()
         initiateApplication = InitiateApplication(application.driver as AppiumDriver)
     }
 
+    //function to shutdown driwer
     fun shutDown(){
         application.closeDriver()
     }
@@ -34,9 +37,10 @@ open class TestRunner: ScenarioTest<Given?, When?,Then?>() {
 
     }
 
+    //Jgiven Scenario
     @Test
     fun jgivenScenario(){
-        getScenario().startScenario("User Opens the application and redeems the Rewe coupon");
+        getScenario().startScenario("User Opens the application and Activate the Rewe partner Coupon");
         given()
             ?.`I click on the Application icon on Drawer`()
         then()

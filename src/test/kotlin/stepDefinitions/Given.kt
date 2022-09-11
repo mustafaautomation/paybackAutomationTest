@@ -6,6 +6,7 @@ import io.appium.java_client.AppiumDriver
 import pages.InitiateApplication
 import utilities.ProjectSetup
 
+//This class contains Given Method functionalities
 open class Given : Stage<Given?>() {
     @ProvidedScenarioState
     var driver: AppiumDriver? = null

@@ -7,6 +7,7 @@ import pages.CouponFilterPage
 import pages.CouponPage
 import utilities.ProjectSetup
 
+//This class contains When Method functionalities
 open class When : Stage<When?>() {
     @ProvidedScenarioState
     var driver: AppiumDriver? = null
